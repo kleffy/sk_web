@@ -1,0 +1,101 @@
+<!-- about/templates/about/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>About Southern Kaduna People Union</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+          The Southern Kaduna People Union (SKPU) is a community organization dedicated to the welfare and progress of the people of Southern Kaduna. Established in 19XX, SKPU has worked tirelessly to bring together the diverse communities in the region and foster unity, understanding, and cooperation.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'about/history.jpg' %}" alt="Historic photo of Southern Kaduna People Union" class="img-fluid">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <h3>Our Mission</h3>
+        <p>
+          Our mission is to preserve and promote the rich cultural heritage of Southern Kaduna, empower our people through education and skill development, and advocate for the rights and interests of our communities at the local, national, and international levels.
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <h3>Our Vision</h3>
+        <p>
+          We envision a prosperous and united Southern Kaduna where all people have equal opportunities to thrive and contribute to the region's growth and development.
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <h3>Our Values</h3>
+        <ul>
+          <li><strong>Unity:</strong> We believe in the strength of unity and strive to foster harmonious relationships among our diverse communities.</li>
+          <li><strong>Respect:</strong> We uphold respect for our cultural differences and acknowledge the unique contributions of each community.</li>
+          <li><strong>Integrity:</strong> We are committed to operating with honesty, transparency, and accountability in all our endeavors.</li>
+          <li><strong>Empowerment:</strong> We seek to empower the people of Southern Kaduna by providing opportunities for education, skill development, and economic growth.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <h3>Our Impact</h3>
+        <p>
+          Over the years, SKPU has made significant strides in improving the quality of life for the people of Southern Kaduna. Some of our key accomplishments include:
+        </p>
+        <ul>
+          <li>Organizing cultural events and festivals to celebrate and preserve our unique heritage</li>
+          <li>Providing scholarships and educational support to underprivileged students</li>
+          <li>Partnering with local businesses to create job opportunities and stimulate economic growth</li>
+          <li>Advocating for the rights and interests of our communities in local and national decision-making processes</li>
+        </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3>Our Team</h3>
+      <p>
+        The success of SKPU is made possible by our dedicated team of leaders, staff, and volunteers who work tirelessly to achieve our mission and vision.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'about/team_member_1.jpg' %}" alt="Team member 1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Team Member 1</h5>
+          <p class="card-text">President</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'about/team_member_2.jpg' %}" alt="Team member 2" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Team Member 2</h5>
+          <p class="card-text">Vice President</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'about/team_member_3.jpg' %}" alt="Team member 3" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Team Member 3</h5>
+          <p class="card-text">Secretary</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

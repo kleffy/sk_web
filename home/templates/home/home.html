@@ -1,0 +1,17 @@
+<!-- home/templates/home/home.html -->
+{% extends 'base.html' %}
+{% load static %}  <!-- Add this line -->
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Welcome to Southern Kaduna People Union</h2>
+      <p>
+        This is the official website for the Southern Kaduna People Union. Here, you can find the latest news, information, and updates about our people and our community.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'home/home_image.jpg' %}" alt="Southern Kaduna People" class="img-fluid">
+    </div>
+  </div>
+{% endblock %}

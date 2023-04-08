@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.content }}</p>
+    <p>Published on: {{ article.pub_date }}</p>
+    <p>Author: {{ article.author }}</p>
+    <p>Category: {{ article.category }}</p>
+    <p>Tags: {% for tag in article.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.title }}">
+    {% endif %}
+    <a href="{% url 'news_list' %}">Back to news list</a>
+{% endblock %}

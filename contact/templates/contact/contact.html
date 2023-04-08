@@ -1,0 +1,18 @@
+<!-- contact/templates/contact/contact.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div class="row mt-5">
+      <div class="col-md-8">
+        <form method="POST" action="">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

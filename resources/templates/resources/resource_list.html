@@ -1,0 +1,22 @@
+<!-- resources/templates/resources/resource_list.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <h2>Resources</h2>
+    <div class="row mt-5">
+      {% for resource in resources %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ resource.title }}</h5>
+              <p class="card-text">{{ resource.description|truncatewords:20 }}</p>
+              <a href="{{ resource.file.url }}" class="btn btn-primary" download>Download</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
