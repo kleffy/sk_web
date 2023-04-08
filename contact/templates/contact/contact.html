@@ -9,7 +9,22 @@
       <div class="col-md-8">
         <form method="POST" action="">
           {% csrf_token %}
-          {{ form.as_p }}
+          <div class="mb-3">
+            <label for="{{ form.name.auto_id }}" class="form-label">Name</label>
+            <input type="text" class="form-control" id="{{ form.name.auto_id }}" name="{{ form.name.html_name }}" value="{{ form.name.value|default:'' }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="{{ form.email.auto_id }}" class="form-label">Email</label>
+            <input type="email" class="form-control" id="{{ form.email.auto_id }}" name="{{ form.email.html_name }}" value="{{ form.email.value|default:'' }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="{{ form.subject.auto_id }}" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="{{ form.subject.auto_id }}" name="{{ form.subject.html_name }}" value="{{ form.subject.value|default:'' }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="{{ form.message.auto_id }}" class="form-label">Message</label>
+            <textarea class="form-control" id="{{ form.message.auto_id }}" name="{{ form.message.html_name }}" rows="5" required>{{ form.message.value|default:'' }}</textarea>
+          </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
       </div>
