@@ -1,17 +1,57 @@
 <!-- home/templates/home/home.html -->
 {% extends 'base.html' %}
-{% load static %}  <!-- Add this line -->
+{% load static %}
 
 {% block content %}
-  <div class="row">
-    <div class="col-md-8">
-      <h2>Welcome to Southern Kaduna People Union</h2>
-      <p>
-        This is the official website for the Southern Kaduna People Union. Here, you can find the latest news, information, and updates about our people and our community.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <img src="{% static 'home/home_image.jpg' %}" alt="Southern Kaduna People" class="img-fluid">
-    </div>
+  <div class="container">
+    <h2>Welcome to the Southern Kaduna People Union Website</h2>
+    <p>
+      The Southern Kaduna People Union (SOKAPU) is a platform that brings together
+      the people of Southern Kaduna, providing them with a collective voice and
+      fostering unity, progress, and development. We are dedicated to promoting
+      the rich cultural heritage, values, and traditions of the Southern Kaduna
+      people.
+    </p>
+    <hr>
+    <h3>About Southern Kaduna People in Diaspora (SOKAPDA)</h3>
+    <p>
+      The Southern Kaduna People in Diaspora (SOKAPDA) is an organization
+      formed by individuals from the Southern Kaduna region who are living and
+      working in various countries around the world. SOKAPDA aims to create a
+      strong network of support and cooperation among its members, with the
+      ultimate goal of contributing to the growth and development of Southern
+      Kaduna.
+    </p>
+    <p>
+      SOKAPDA provides a platform for its members to connect, collaborate, and
+      exchange ideas and resources, as well as to promote the well-being of the
+      people of Southern Kaduna. The organization is actively involved in
+      various community development initiatives, including education, healthcare,
+      economic empowerment, and cultural preservation.
+    </p>
+    <p>
+      Through SOKAPDA's efforts, the Southern Kaduna diaspora has been able to
+      make a significant impact on the lives of people in their home region,
+      providing support and resources to help them overcome challenges and
+      achieve their goals. By working together, the members of SOKAPDA are
+      building a brighter future for Southern Kaduna and its people.
+    </p>
+    <hr>
+    <h3>Stay Updated with News and Events</h3>
+    <p>
+      Visit our <a href="{% url 'news_list' %}">News</a> section for the latest
+      updates, stories, and happenings from Southern Kaduna. You can also check
+      out our <a href="{% url 'events' %}">Events</a> page to learn about
+      upcoming gatherings, meetings, and cultural events in the Southern Kaduna
+      community.
+    </p>
+    <hr>
+    <h3>Join Our Community</h3>
+    <p>
+      If you are from Southern Kaduna and would like to join our community or
+      learn more about our activities, please visit our
+      <a href="{% url 'about' %}">About</a> page or
+      <a href="{% url 'contact' %}">Contact Us</a> to get in touch.
+    </p>
   </div>
 {% endblock %}

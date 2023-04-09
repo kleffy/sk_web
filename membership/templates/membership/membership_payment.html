@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <h2>Membership Payment</h2>
+    <form method="POST" action="" id="payment-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="{{ key }}"
+              data-description="Membership Fee"
+              data-amount="2000"
+              data-currency="gbp"
+              data-locale="auto">
+      </script>
+    </form>
+  </div>
+{% endblock %}

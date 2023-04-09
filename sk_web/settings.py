@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'events',
     'gallery',
     'resources',
+    'membership',
     'contact',
-    
+    'crispy_forms',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,9 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your-email@gmail.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
+
+
+STRIPE_SECRET_KEY = 'your_stripe_secret_key_here'
+STRIPE_PUBLISHABLE_KEY = 'your_stripe_publishable_key_here'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

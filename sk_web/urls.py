@@ -31,7 +31,9 @@ urlpatterns = [
     path('events/', EventListView.as_view(), name='events'),
     path('gallery/', GalleryListView.as_view(), name='gallery'),
     path('resources/', ResourceListView.as_view(), name='resources'),
+    path('membership/', include('membership.urls')),
     path('contact/', ContactView.as_view(), name='contact'),
     path('contact/success/', ContactSuccessView.as_view(), name='contact_success'),
+    path('accounts/', include('accounts.urls')),
     path('', HomePageView.as_view(), name='home'),
 ]
